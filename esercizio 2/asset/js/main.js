@@ -2,30 +2,29 @@
 // Il software stampa prima la parola più corta, poi la parola più lunga.
 
 
-let x = prompt ("Inserisci una parola");
-console.log ("La parola 1 è " + x)
+let parolaUno = prompt ("Inserisci una parola");
+console.log ("La parola 1 è " + parolaUno)
 
-let y = prompt ("Inserisci un'altra parola");
-console.log ("La parola 2 è " + y)
+let parolaDue = prompt ("Inserisci un'altra parola");
+console.log ("La parola 2 è " + parolaDue)
 
-let parolaUno = Number (x.length)
+let lunghezzaParola1 = Number (parolaUno.length);
 
-let parolaDue = Number (y.lenght)
+let lunghezzaParola2 = Number (parolaDue.length);
 
-
-if (parolaUno > parolaDue) {
+if (lunghezzaParola1 > lunghezzaParola2) {
   console.log ("La prima parola è più lunga")
   document.getElementById("risultato").innerHTML = 
-  `<div>La parola più lunga è ${parolaUno}</div>`
-  `<div>La parola più corta è ${parolaDue}</div>`
+  `<div>La parola più corta è ${parolaDue}</div>
+  <div>La parola più lunga è ${parolaUno}</div>`
 
-} else if (parolaUno < parolaDue) {
+} else if (lunghezzaParola1 < lunghezzaParola2) {
   console.log ("La seconda parola è più lunga")
   document.getElementById("risultato").innerHTML = 
-  `<div>La parola più lunga è ${parolaDue}</div>`
-  `<div>La parola più corta è ${parolaUno}</div>`
+  `<div>La parola più corta è ${parolaUno}</div>
+  <div>La parola più lunga è ${parolaDue}</div>`
 
-}else {
+} else {
   console.log ("Le parola sono ugualmente lunghe")
   document.getElementById("risultato").innerHTML = 
   `<div>Le parole sono ugualmente lunghe</div>`
